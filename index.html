@@ -294,6 +294,12 @@ section{position:relative}
 .score strong{font-family:var(--serif);font-weight:400;font-size:clamp(5rem,12vw,9rem);line-height:.9}
 .stars{display:flex;gap:4px;margin:.6rem 0}
 .stars svg{width:22px;height:22px;fill:var(--terracota)}
+.reviews{display:grid;gap:1.2rem}
+.review{background:var(--linho);color:var(--texto);border-radius:28px;padding:clamp(1.6rem,3vw,2.4rem);display:grid;gap:1rem}
+.review:nth-child(2){margin-left:clamp(0rem,4vw,3rem)}
+.review blockquote{font-family:var(--serif);font-size:clamp(1.4rem,2.2vw,1.9rem);line-height:1.25}
+.review figcaption{display:flex;flex-direction:column;font-size:1rem}
+.review figcaption span{opacity:.7}
 .depo-slot{border:1px dashed color-mix(in srgb, var(--texto) 35%, transparent);border-radius:28px;padding:2rem;display:grid;gap:1rem}
 
 /* Espaço */
@@ -333,7 +339,7 @@ footer small{display:block;margin-top:1.2rem;opacity:.7;font-size:1rem}
 /* Estados de animação só com JS + movimento */
 html.motion [data-reveal]{opacity:0;transform:translateY(40px)}
 .dark{color:var(--linho)}
-.card,.step:nth-child(1),.step:nth-child(2),.ep,.depo-slot,.c-reflexo{color:var(--texto)}
+.card,.step:nth-child(1),.step:nth-child(2),.ep,.review,.c-reflexo{color:var(--texto)}
 .c-perso,.card-photo{color:var(--linho)}
 html:not(.motion) .manifesto,html:not(.motion) .final{background:var(--escuro)}
 html:not(.motion) .fluxo{background:var(--verde)}
@@ -657,9 +663,17 @@ html.motion [data-mask]{clip-path:inset(100% 0 0 0 round 28px)}
       <p data-reveal style="margin-top:1.2rem">Nota no Google, com as avaliações reais de quem já passou por aqui.</p>
       <a class="btn btn-line" style="margin-top:1.6rem" href="https://www.google.com/maps/search/?api=1&amp;query=Toque+da+Deusa+Graciliano+Ramos+2916+Natal" target="_blank" rel="noopener">Ver avaliações no Google</a>
     </div>
-    <div class="depo-slot" data-reveal>
-      <p><span class="confirmar">[CONFIRMAR depoimentos]</span></p>
-      <p>Aqui entram 2 ou 3 depoimentos reais do destaque “Feedbacks”, com o primeiro nome e a autorização de cada cliente.</p>
+    <div class="reviews">
+      <figure class="review" data-reveal>
+        <div class="stars" aria-label="5 estrelas"><svg viewBox="0 0 24 24"><path d="M12 2l3 7 7 .6-5.3 4.7 1.6 7.2L12 17.8 5.7 21.5l1.6-7.2L2 9.6 9 9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 7 7 .6-5.3 4.7 1.6 7.2L12 17.8 5.7 21.5l1.6-7.2L2 9.6 9 9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 7 7 .6-5.3 4.7 1.6 7.2L12 17.8 5.7 21.5l1.6-7.2L2 9.6 9 9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 7 7 .6-5.3 4.7 1.6 7.2L12 17.8 5.7 21.5l1.6-7.2L2 9.6 9 9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 7 7 .6-5.3 4.7 1.6 7.2L12 17.8 5.7 21.5l1.6-7.2L2 9.6 9 9z"/></svg></div>
+        <blockquote>“Espaço agradável e a profissional é super atenciosa. Recomendo para todos q querem aliviar as tensões da rotina”</blockquote>
+        <figcaption><strong>Arthur Andrade</strong><span>Avaliação no Google</span></figcaption>
+      </figure>
+      <figure class="review" data-reveal>
+        <div class="stars" aria-label="5 estrelas"><svg viewBox="0 0 24 24"><path d="M12 2l3 7 7 .6-5.3 4.7 1.6 7.2L12 17.8 5.7 21.5l1.6-7.2L2 9.6 9 9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 7 7 .6-5.3 4.7 1.6 7.2L12 17.8 5.7 21.5l1.6-7.2L2 9.6 9 9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 7 7 .6-5.3 4.7 1.6 7.2L12 17.8 5.7 21.5l1.6-7.2L2 9.6 9 9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 7 7 .6-5.3 4.7 1.6 7.2L12 17.8 5.7 21.5l1.6-7.2L2 9.6 9 9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 7 7 .6-5.3 4.7 1.6 7.2L12 17.8 5.7 21.5l1.6-7.2L2 9.6 9 9z"/></svg></div>
+        <blockquote>“Experiência maravilhosa num ambiente super aconchegante!”</blockquote>
+        <figcaption><strong>Maria Gloria</strong><span>Avaliação no Google</span></figcaption>
+      </figure>
     </div>
   </div>
 </section>

@@ -1,5 +1,7 @@
 # Site Toque da Deusa (Emylly Oliveira, massoterapeuta em Natal)
 
+No ar: https://site-emylly.vercel.app/
+
 Site estático, sem etapa de build. HTML, CSS e JS ficam em `index.html`.
 
 ## Rodar localmente

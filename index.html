@@ -397,6 +397,19 @@ html.motion [data-mask]{clip-path:inset(100% 0 0 0 round 28px)}
   *{scroll-behavior:auto!important}
 }
 </style>
+<script>
+/* Decide se tem movimento antes de pintar */
+(function(){
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!reduce) document.documentElement.classList.add('motion');
+  /* Segurança: se o JS das animações falhar, libera tudo em 4s */
+  window.__safety=setTimeout(function(){
+    document.documentElement.classList.remove('motion');
+    var i=document.getElementById('intro'); if(i) i.remove();
+    document.body.style.overflow='';
+  },4000);
+})();
+</script>
 </head>
 <body>
 
@@ -747,17 +760,7 @@ html.motion [data-mask]{clip-path:inset(100% 0 0 0 round 28px)}
     a.target='_blank'; a.rel='noopener';
   });
 })();
-/* Decide se tem movimento antes de pintar */
-(function(){
-  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if(!reduce) document.documentElement.classList.add('motion');
-  /* Segurança: se o JS das animações falhar, libera tudo em 4s */
-  window.__safety=setTimeout(function(){
-    document.documentElement.classList.remove('motion');
-    var i=document.getElementById('intro'); if(i) i.remove();
-    document.body.style.overflow='';
-  },4000);
-})();
+
 </script>
 <script src="vendor/gsap.min.js" defer></script>
 <script src="vendor/ScrollTrigger.min.js" defer></script>
